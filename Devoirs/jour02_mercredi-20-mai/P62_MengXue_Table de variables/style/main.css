@@ -1,0 +1,17 @@
+table{
+    border: 1px solid blue;
+    margin: auto;
+    text-align: center;
+}
+caption{
+    color: blue;
+}
+
+tr:first-of-type{
+    background-color: blue;
+    color: white;
+}
+
+th,td{
+    border: 1px solid black;
+}

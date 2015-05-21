@@ -12,11 +12,11 @@ $c = "0";   //false
 $d = null;   //false
 $e = "TRUE";
 $f = FALSE;
-$g = ($a OR $b);
+$g = ($a OR $b);   //此处最好用 || 和 &&
 $h = ($a AND $c);
 
 echo '$a: ',$a,' ',gettype($a);
-if($a){echo ', true</br>';} else{echo ', false</br>';};
+if($a){echo ', true</br>';} else{echo ', false</br>';};  //或者 echo $a? 'true' : 'false';
 
 echo '$b: ',$b,' ',gettype($b);
 if($b){echo ', true</br>';} else{echo ', false</br>';};
