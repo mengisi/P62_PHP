@@ -1,4 +1,4 @@
-/*
+
 Alias /P62_PHP/ "u:/P62_PHP/" 
 <Directory "u:/P62_PHP/">
 	Options Indexes FollowSymLinks MultiViews
@@ -7,4 +7,4 @@ Alias /P62_PHP/ "u:/P62_PHP/"
 #	Allow from all
 	Require local
 </Directory>
-*/
+
