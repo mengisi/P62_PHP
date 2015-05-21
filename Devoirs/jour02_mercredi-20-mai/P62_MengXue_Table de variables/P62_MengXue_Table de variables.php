@@ -22,7 +22,7 @@ $bonNiveau=true;
             <th>Sa valeur</th>
         </tr>
         <tr>
-            <td>ecole</td>
+           <?php echo "<td>\$ecole</td>"; ?>         <!--可以自动打印变量的名称-->
             <td><?php echo gettype($ecole);?></td>
             <td><?php echo $ecole; ?></td>
         </tr>
