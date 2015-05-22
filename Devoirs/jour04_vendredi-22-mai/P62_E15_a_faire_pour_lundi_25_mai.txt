@@ -1,0 +1,17 @@
+A faire pour lundi 25 mai :
+(1) Reprendre l'exercice Mois Couleurs en suivant 
+-- Définir vous-même les mois et les couleurs dans UN SEUL array (qui ne contiendra pas les numéros des mois); Placez cette déclaration de array dans un fichier php distinct (mois_data.php)
+-- Gérer les numéros des mois (1,2,....12)  à l'aide d'une variable compteur
+-- Dessiner les tableaux (<table>) horizontal et vertical dans deux scripts php distincts faisant tous les deux appel (require_once) au script mois_data.php.
+
+(2) Construisez en php un menu horizontal (avec du code css simple), d'au moins 4 entrées, de la façon suivante:
+-- Les URLs et les libellés des éléments de menu sont fournis à partir d'un array déclaré dans un fichier menu.php. Le array a la forme array('Accueil' => 'index.php', 'contact' => 'contact.php', ...);
+-- Le code qui génère le HTML du menu (dans une balise <nav>) est lui-même placé dans le fichier menu.php
+-- Toutes les fichier-pages PHP-HTML appelées par le menu (index.php, contact.php, ...) utilisent (require_once) le fichier menu.php et affichent le menu de la même façon
+
+
+(3) Tableau de températures:
+-- Construire un tableau ayant comme clef des dates au format
+
+(4) Tuto git http://192.168.20.60/wiki/index.php/Git_exos
+ 
