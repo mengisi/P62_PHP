@@ -1,5 +1,5 @@
 <?php
-
+require_once 'menu.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,7 +16,7 @@
 <body>
 <div id="main_wrapper">
     <?php
-    require_once 'menu.php';
+    do_menu();
     ?>
 </div>
 <!--<script src="js/main.js"></script>-->
