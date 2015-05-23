@@ -10,8 +10,21 @@ A faire pour lundi 25 mai :
 -- Toutes les fichier-pages PHP-HTML appelées par le menu (index.php, contact.php, ...) utilisent (require_once) le fichier menu.php et affichent le menu de la même façon
 
 
-(3) Tableau de températures:
--- Construire un tableau ayant comme clef des dates au format
+(3) Tableau de relevés de températures:
+- Dans un premier script PHP (lib_temperature.php)
+-- Construire un tableau PHP ($releves_temp) de température, ayant la structure suivante :
+--- Les clefs sont des dates au format '2015-05-22'
+--- Les valeurs sont des températures au format 26.4 (des décimaux)
+--- Mettre une dixaine de relevés
+-- Créer une FONCTION afficher_temperatures($tb) qui réalise l'affichage d'une table de températures sous la forme d'une <table> HTML, verticalement, avec le numéro de ligne dans la première colonne, les jours dans la seconde colonne et les températures dans la troisième colonne: 
+---	Num.	Date		Température
+---	1		2015-05-22	15.6
+---	2		2015-05-23	22.2
+-- La fonction doit recevoir le tableau PHP à afficher en ARGUMENT (ou PARAMÈTRE)
+- Dans une page web (index.php): 
+-- Faire afficher le tableau initial 
+-- Puis supprimer du tableau une ou deux valeurs ( par leur date : ex: unset($releves_temp['2015-05-22']) )
+-- Faire réafficher le tableau diminué dans la même page web
 
 (4) Tuto git http://192.168.20.60/wiki/index.php/Git_exos
  
