@@ -12,9 +12,9 @@ $date_temperature = array(
     '2015-05-31' => 35.4,
 );
 
-function afficher_temperatures($tb)
+function afficher_temperatures(&$tb)
 {
-        echo '<table>';
+    echo '<table>';
     echo "<tr><th>Num.</th><th>Date</th><th>Temperature</th></tr>";
     $count = 1;
     foreach ($tb as $date => $temperature) {
@@ -22,4 +22,5 @@ function afficher_temperatures($tb)
         $count++;
     }
     echo '</table>';
+
 }

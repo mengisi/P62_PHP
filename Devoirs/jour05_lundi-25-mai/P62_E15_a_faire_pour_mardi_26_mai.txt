@@ -1,0 +1,14 @@
+A faire pour mardi 26 mai :
+(1) Reprendre le script d'affichage des températures en fonction des dates:
+- Modifier la fonction afficher_temperatures de la façon suivante :
+-- Passer un second paramètre ($trier_date) qui provoque l'affichage du tableau avec les relevés classés par ordre croissant des dates. Par défaut (en l'absence de second paramètre à l'appel), la fonction ne doit pas effectuer de tri. (utiliser ksort())
+-- Passer un troisième paramètre ($date_fmt) pour afficher les dates à une autre format que 2015-05-25. Par exemple (25 mai 2015). Par défaut les dates seront affichées au format 25-05-2015. (utiliser mktime() et date())
+- Faire afficher :
+-- le tableau original
+-- puis le tableau trié par ordre croissant des dates (chronologique) et les dates affichées au format 'Lundi 25 mai 2015'
+ 
+(2) Dans le fichier exercices03_queryString, faire les exercices 3, 4, 5 et 6. Pour le 3, reprendre votre script de table de multiplication
+
+(3) Prendre le fichier villesQuebec.txt. Afficher dans une page un formulaire avec une liste déroulante proposant un choix de ces villes avec le premier caractère en majuscules.
+
+(4) Afficher Bonjour inconnu si il n'y a pas les deux paramètres (nom et prenom)

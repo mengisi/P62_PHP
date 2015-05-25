@@ -18,7 +18,6 @@ require_once 'lib_temperature.php';
     unset($date_temperature['2015-05-28']);
 
     afficher_temperatures($date_temperature);
-
     ?>
 </div>
 <!--<script src="js/main.js"></script>-->
