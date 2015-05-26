@@ -16,7 +16,10 @@
     if(array_key_exists('m',$_GET)&&array_key_exists('a',$_GET)){
         $mois=(int)$_GET['m']+1;
         $annee=(int)$_GET['a'];
-        $date=ucfirst(strftime('%B %Y', mktime(0, 0, 0, $mois, 0, $annee)));   //首字大写
+
+//        以下，要用utf8_encode来解码法语
+
+        $date=ucfirst(utf8_encode(strftime('%B %Y', mktime(0, 0, 0, $mois, 0, $annee))));   //首字大写
         echo "<h1>$date</h1>";
     }
     ?>

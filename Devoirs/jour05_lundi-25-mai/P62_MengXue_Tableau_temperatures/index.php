@@ -17,8 +17,8 @@ require_once 'lib_temperature.php';
     //unset($date_temperature['2015-05-25']);
    // unset($date_temperature['2015-05-28']);
 
-    afficher_temperatures_2($date_temperature, 'trier_date');
-    afficher_temperatures_3($date_temperature, 'trier_date','date_fmt');
+    afficher_temperatures_2($date_temperature, 'asasaa');
+    afficher_temperatures_3($date_temperature, 'dfsdfsdfd','date_fmt');
 
     afficher_temperatures($date_temperature);
 
