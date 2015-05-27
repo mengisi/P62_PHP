@@ -35,10 +35,10 @@
         <input class="d" type="text" id="nom" name="Nom">
         <label class="g">Categorie: </label>
         <div class="d" id="radio">
-        <label><input type="radio" name="OpCat"> 1 </label>
-        <label><input type="radio" name="OpCat"> 2 </label>
-        <label><input type="radio" name="OpCat"> 3 </label>
-        <label><input type="radio" name="OpCat"> 4 </label>
+        <label><input type="radio" value="1" name="OpCat"> 1 </label>
+        <label><input type="radio" value="2" name="OpCat"> 2 </label>
+        <label><input type="radio" value="3" name="OpCat"> 3 </label>
+        <label><input type="radio" value="4" name="OpCat"> 4 </label>
         </div>
         <label class="g" for="departement">Departement: </label>
         <select class="d" id="departement" name="ListeDep">
@@ -57,8 +57,8 @@
         </select>
         <label class="g">Situation: </label>
         <div class="d" id="radio2">
-            <label><input type="radio" name="OpSituation"> Permannant </label>
-            <label><input type="radio" name="OpSituation"> Vacataire </label>
+            <label><input type="radio" value="permannant" name="OpSituation"> Permannant </label>
+            <label><input type="radio" value="vacataire" name="OpSituation"> Vacataire </label>
         </div>
         <label class="g" for="affectation">Annee Affectation: </label>
         <input class="d" type="text" id="affectation" name="Annee">
