@@ -1,0 +1,9 @@
+A faire pour jeudi_28_mai :
+(1) Faire une page php avec deux formulaires:
+- Un formulaire de connexion (login)
+- Un formulaire de logoff (logoff)
+
+(2) Initialement la page affiche le formulaire de login. Quand l'utilisateur entre un nom et un mot de passe fixés (nom='admin') et (mdp='123'), utilisez des define, la page affiche à présent le formulaire de déconnexion.
+
+(Défi) Maintenez l'etat de connexion à l'aide d'un cookie et assurez la déconnexion à l'aide de ce cookie.
+ 
