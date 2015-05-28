@@ -1,13 +1,12 @@
 <?php
-//setcookie('status', '');
 
 define('NAME', 'admin');
 define('PASSWORD', '123');
 
 $name_ok = array_key_exists('name', $_POST) && ($_POST['name'] == NAME);
 $password_ok = array_key_exists('password', $_POST) && ($_POST['password'] == PASSWORD);
-$cookie_ok = array_key_exists('status', $_COOKIE) && ($_COOKIE['status'] == 'login');
-$logoff_ok = array_key_exists('logoff_btn', $_POST) && ($_POST['logoff_btn'] == 'Log off');
+$cookie_exist = array_key_exists('status', $_COOKIE) && ($_COOKIE['status'] == 'login');
+$logoff_clique = array_key_exists('logoff_btn', $_POST) && ($_POST['logoff_btn'] == 'Log off');
 
 function afficher_login()
 {
@@ -40,13 +39,13 @@ function afficher_logoff()
 <body>
 <div id="main_wrapper">
     <?php
-
-    if ($logoff_ok) {
+    if ($logoff_clique) {
         setcookie('status', null);
-    }
-
-    if (($name_ok && $password_ok) || ($cookie_ok)) {
-        setcookie('status', null);
+        afficher_login();
+    } elseif ($name_ok && $password_ok) {
+        setcookie('status', 'login',time()+3600*24);
+        afficher_logoff();
+    } elseif ($cookie_exist) {
         afficher_logoff();
     } elseif (array_key_exists('name', $_POST) || array_key_exists('password', $_POST)) {
         afficher_login();
