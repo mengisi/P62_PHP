@@ -12,7 +12,7 @@ $logoff_ok = array_key_exists('logoff_btn', $_POST) && ($_POST['logoff_btn'] == 
 function afficher_login()
 {
     echo '<h2>Formulaire Login</h2>';
-    echo '<form action = "#" method = "post" name="login_form">';
+    echo '<form action = "Test_formulaire_login_logoff_pour_virifer_status_of_cookie" method = "post" name="login_form">';
     echo '<label for="name" > User name: </label >';
     echo '<input type = "text" id = "name" name = "name" >';
     echo '<label for="pw" > Password: </label >';
@@ -24,7 +24,7 @@ function afficher_login()
 function afficher_logoff()
 {
     echo '<h2>Maintenant vous etes login !</h2>';
-    echo '<form action = "#" method = "post" name="logoff_form">';
+    echo '<form action = "Test_formulaire_login_logoff_pour_virifer_status_of_cookie" method = "post" name="logoff_form">';
     echo '<input type = "submit" value = "Log off" name="logoff_btn">';
     echo '</form >';
 }
@@ -59,6 +59,7 @@ function afficher_logoff()
     } else {
         afficher_login();
     }
+	var_dump($_COOKIE);
     ?>
 </div>
 </body>
