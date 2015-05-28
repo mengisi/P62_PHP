@@ -1,12 +1,13 @@
 <?php
+var_dump($_COOKIE);
 
 define('NAME', 'admin');
 define('PASSWORD', '123');
 
 $name_ok = array_key_exists('name', $_POST) && ($_POST['name'] == NAME);
 $password_ok = array_key_exists('password', $_POST) && ($_POST['password'] == PASSWORD);
-$cookie_exist = array_key_exists('status', $_COOKIE) && ($_COOKIE['status'] == 'login');
-$logoff_clique = array_key_exists('logoff_btn', $_POST) && ($_POST['logoff_btn'] == 'Log off');
+$cookie_ok = array_key_exists('status', $_COOKIE) && ($_COOKIE['status'] == 'login');
+$logoff_ok = array_key_exists('logoff_btn', $_POST) && ($_POST['logoff_btn'] == 'Log off');
 
 function afficher_login()
 {
@@ -40,17 +41,19 @@ function afficher_logoff()
 <div id="main_wrapper">
     <?php
 
-    // 注意： 本人发现 设置或清除cookie后，需要刷新页面才能成功更新cookie的状态 ？？？？？？
-
-    if ($logoff_clique) {
+    if ($logoff_ok) {
         setcookie('status', null);
-        afficher_login();
-    } elseif ($name_ok && $password_ok) {
-        setcookie('status', 'login',time()+3600*24);
+		afficher_login();
+		
+    }
+    elseif ($name_ok && $password_ok)  {
+		
+        setcookie('status', 'login');
         afficher_logoff();
-    } elseif ($cookie_exist) {
-        afficher_logoff();
-    } elseif (array_key_exists('name', $_POST) || array_key_exists('password', $_POST)) {
+    }elseif($cookie_ok){
+		
+		 afficher_logoff();
+	}	elseif (array_key_exists('name', $_POST) || array_key_exists('password', $_POST)) {
         afficher_login();
         echo '<h3>User name or password incorrect !</h3>';
     } else {
