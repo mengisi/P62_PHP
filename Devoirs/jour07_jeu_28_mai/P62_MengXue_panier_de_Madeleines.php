@@ -1,17 +1,20 @@
 <?php
 session_start();
-    //初始化该变量的值 非常重要
+//初始化该变量的值 非常重要
 if (!array_key_exists('nombre', $_SESSION)) {
     $_SESSION['nombre'] = 0;
 }
 if (array_key_exists('action', $_GET) && ($_GET['action'] == 'add')) {
     $_SESSION['nombre']++;
+    header('Location:' . $_SERVER['PHP_SELF']);          //  让其指向本页，防止刷新时也增加数字
 }
 if (array_key_exists('action', $_GET) && ($_GET['action'] == 'remove')) {
-    $_SESSION['nombre'] = ($_SESSION['nombre'] > 0)? $_SESSION['nombre']-1:0;
+    $_SESSION['nombre'] = ($_SESSION['nombre'] > 0) ? $_SESSION['nombre'] - 1 : 0;
+    header('Location:' . $_SERVER['PHP_SELF']);          //  让其指向本页，防止刷新时也增加数字
 }
 if (array_key_exists('action', $_GET) && ($_GET['action'] == 'remove_all')) {
     $_SESSION['nombre'] = 0;
+    header('Location:' . $_SERVER['PHP_SELF']);          //  让其指向本页，防止刷新时也增加数字
 }
 ?>
 <!DOCTYPE html>
